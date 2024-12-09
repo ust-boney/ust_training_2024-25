@@ -1,0 +1,139 @@
+In Angular - we manage 4 categories of data
+
+1. primitive data - name, firstnumber,isPermenant 
+	applicationName:string = "Angular App";
+
+2. primitive data array - array of primitive data types	
+	friends:string[] = ['Mahesh','Ritvik','Sanjay','Raavi']
+
+3. Json Object - this are key and a value pair
+
+productDetails = {pId:101, pName:'Pepsi','pCategory:'Cold-Drink',pPrice:50,pIsInStock:false }
+
+productDetails = {
+		pId:101, 
+		pName:'Pepsi',
+		pCategory:'Cold-Drink',
+		pPrice:50,
+		pIsInStock:false,
+		manufacturingDetails:
+			{
+				maker:'PepsiCo USA',
+				place: 'Pune',
+				date_of_manufacture:'10-Oct-2025',
+				validity:'6 months'
+			},
+		compitetor:['Appy Fizz','Coke','Thumps-Up','Redbull']
+		
+	       }
+
+4. JSON Object array 
+		products = [
+				{pId:101, pName:'Pepsi','pCategory:'Cold-Drink',pPrice:50,pIsInStock:false },
+				{pId:102, pName:'Nike','pCategory:'Sports',pPrice:7500,pIsInStock:true },
+				{pId:103, pName:'IPhone','pCategory:'Electronics',pPrice:160000,pIsInStock:true }
+			   ]
+
+	
+-----------------------------------------------------------------------
+let us try them
+
+1. Create a new application - shoppingapp - ng new shoppingapp
+2. in the app.component.ts, add a new value to title and a new array of string
+	  
+    title:string = "Nikhil's Shopping App";
+    productsList:string[] = ['Shoes','Tshirt','Cold-Drinks','Head-Phones','Mobile']; 
+
+3. as we will be using *ngFor derictive, in app.component.html file, we will need to import the directive,
+	in the app.component.ts, 
+	add NgFor on line 7
+ 	imports: [RouterOutlet,NgFor]
+		make sure, NgFor with tab so import gets added, else u will have to type
+		import { NgFor } from '@angular/common';
+4. in the .html file, lets display this in unordered list
+	<h1> {{ title }} </h1>
+
+	<ul>
+ 		 <li *ngFor="let p of productsList">{{ p }}</li>
+	</ul>
+	test the app
+5. let us now try with checkboxes
+
+=========================================================================
+
+working with JSON objects
+
+create a json object
+
+productDetails = {
+      pId:101,
+      pName:'Pepsi',
+      pCategory:'Cold-Drink',
+      pPrice:50,pIsInStock:false,
+      pImage:'./images/pepsi.jpg' }
+
+in the public folder, create a new folder images and add a file pepsi.jpg
+
+-- let us display the same in html along with image
+
+<h3> Product Details </h3>
+
+<div>
+  <h4> Product Id : {{ productDetails.pId }}</h4>
+  <h4> Product Name : {{ productDetails.pName }}</h4>
+  <h4> Product Category : {{ productDetails.pCategory }}  </h4>
+  <h4>  Product Price : {{ productDetails.pPrice }} </h4>
+  <h4>  Product In Stock : {{ productDetails.pIsInStock }} </h4>
+  <img src="{{ productDetails.pImage }}"/>
+</div>
+
+------------------------------------
+	comment everything in your html file
+	Control + A
+	Control + K + C 
+
+	create a json object array of 5 products
+
+	products = [
+			{pId:101, pName:'Pepsi','pCategory:'Cold-Drink',pPrice:50,pIsInStock:false },
+			{pId:102, pName:'Nike','pCategory:'Sports',pPrice:7500,pIsInStock:true },
+			{pId:103, pName:'IPhone','pCategory:'Electronics',pPrice:160000,pIsInStock:true }
+		  ]
+
+---	display the data in a table
+Hint <table>
+		<tr forloop> 
+			<td> {{ looppointer.pId }} </td>
+			<td> {{ looppointer.pName }} </td>
+			<td> {{ looppointer.pPrice }} </td>
+		</tr>
+     </table>
+-------------------------------
+	once you complete, download 5 product images from google and store them in public/images/...yourimages
+	in the product json object array, add 1 more property as pImg
+
+	we need to display the image in the last column,
+	add img css in the css file as 
+	
+	img { width:150px, height:150px, border-radius:50px }
+	img:hover { width:400px, height:400px }
+	
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

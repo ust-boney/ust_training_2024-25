@@ -1,0 +1,23 @@
+1. let us add some expression / interpolation
+2. in the .ts file, lets add some number
+
+	  firstNumber:number = 20;
+  	  secondNumber:number = 30;
+
+-- we wish to display addition, subtraction, multiplication and division of this numbers
+
+thus we can use interpolation in html
+
+<div>
+	<h3> Addition : {{ firstNumber +  secondNumber}} </h1>
+	<h3> Subtraction : {{ firstNumber -  secondNumber}} </h1>
+	<h3> Multiplication : {{ firstNumber *  secondNumber}} </h1>
+	<h3> Division : {{ firstNumber /  secondNumber}} </h1>
+<div>
+
+3. lets add a Boolean variable (in .ts)
+	isEmployeePermenant:boolean = false
+
+4. in .html 
+ 	<h3> Employee Type :{{ isEmployeePermenant ? 'Permenant':'Not Permenant' }}
+

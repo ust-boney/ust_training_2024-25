@@ -1,0 +1,98 @@
+Angular applications are created in pieces - called components
+
+we create separate component for every uniqe functionality
+eg.
+
+SearchFlights
+Book
+Bokkinghistory
+paymentdetails
+userprofile
+aboutapp
+contactus
+
+thus application is made up of all this component
+
+Component : is like a plug in, reusable, injectable 
+
+Component is made of files
+	.html
+	.css
+	.ts
+	.spec.ts (for testing)
+
+application comes with 1 default component - App, we will create more now using angular cli command
+------------------------------
+create new application bookingApp
+ng new bookingApp
+cd bookingApp
+cd src\app
+mkdir components
+cd components
+
+ng g c searchflight
+ng g c book
+ng g c bookinghistory
+ng g c userprofile
+ng g c aboutus
+ng g c contactus
+
+-------
+check all the folder under src\app u will find all the folders has .html, .css,.ts,.spec.ts
+
+let us go to about us component and add some properties
+
+
+
+in aboutus.component.ts
+aboutusDetails = " lots of contents here from web "
+componentName = "About us";
+
+
+display the same in aboutus.component.html
+<h1> {{ componentName }} </h1>
+<p> {{ aboutusDetails }} </p>
+
+add some css h1{color:blue}
+------
+
+
+time to use/inject the component in app 
+
+in app.component.ts, import the component like u did ngFor
+
+in import 
+	imports: [RouterOutlet,AboutusComponent], (use tab so below line gets included on its own by IDE)
+	import { AboutusComponent } from './components/aboutus/aboutus.component';
+
+in app.component.html
+	 <app-aboutus></app-aboutus> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
