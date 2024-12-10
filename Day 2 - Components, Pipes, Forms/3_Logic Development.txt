@@ -1,0 +1,37 @@
+
+			Logic Development Task : Custom Components and Custom Pipes Development
+
+-------------------------------------------------------------------------------------------------------------
+
+1. create a new application portfolioManagement
+2. It will have a component - equity, which will have stockDetails property which holds details about the stock holding
+	following details
+
+		stockId
+		stockName
+		stockAvailableQty
+		stockPurchasePrice
+		stockCurrentPrice
+	add minimum 10 stocks to the property in a JSON format
+3. we will display the data in a table in rows
+	stockId  Name Qty PurchasePrice CurrentPrice InvestmentValue CurrentValue Status Recommendation
+	101      TCS  300   1600           3200       48000           96000       Profit   Hold
+	102	 IOC  800   180             140       144000          112000      Loss
+										  NA         NA
+		
+	Pipes
+		status will be based on Pipe (create investmentstaus pipe)
+		recommendation would be  (Add, Hold, Sell)
+			if - in profit, and profit is more than 30% and less than =50% - Hold
+			if - in profit, and profit is more than 50% - sell 
+			if - in loss, loss more than 50% - Add 
+			if - in loss, loss less than 50% and more than 30% - hold
+4. apply CSS, display the entire row in green for profit and red for loss, keep color white 
+
+
+
+
+
+
+
+		

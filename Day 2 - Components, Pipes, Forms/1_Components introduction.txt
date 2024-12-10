@@ -1,0 +1,48 @@
+			Angualar
+
+	Components, Pipes, Services, Directives, Routing, Guards
+
+---------------------------------------------------------------------------------------
+	Components
+		-- This are the building blocks of Angular applications
+		-- They are like a reusable plugin
+		-- Made up of 4 files 
+				.html
+				.css
+				.ts
+				.spec.ts
+		-- App is the default component and the main component of an application
+		-- Components can be injected/plugged inside another component, in a simple way
+			<app-bookticket> </app-bookticket>
+		-- In angular, we use simple command to create a component
+			ng generate component bookticket
+			ng g c bookticket
+		-- As a good practice, we create a folder - components - inside the src/app folder and create
+			all the components inside the components folder
+			(same practice for pipes, services, directives etc)
+-----------------------------------------------------------------------------------------------------
+
+1. Create a new angular application, 
+		ng new employeemanagement
+		css
+		N
+2. from terminal, cd employeemanagement/src/app
+		  mkdir components
+		  cd components
+3. ng g c employeedetails
+  
+4. let us add some properties and function inside employeedetails component
+	create a json object array with 6 employees having empNo, empName, empDesignation, 		empSalary,isEmpPermenant
+
+
+
+
+
+
+
+
+
+
+
+
+

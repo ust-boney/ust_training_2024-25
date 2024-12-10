@@ -1,0 +1,8 @@
+
+
+
+we want to display 1 more column in the table
+Bonus - bonus on salary
+if developer : 15% of salary
+if Manager : 12% of salary
+if HR : 18% of salary

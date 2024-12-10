@@ -1,0 +1,70 @@
+Requirement : Take 2 numbers from user, and display add, sub, multiplication, division on a click of the button
+
+
+1. Create a new angular application - ng new userinteraction
+2. create a new component in the componenets folder under src/app
+	ng g c calculation
+3. in the calculation.component.html, we will create a new form nd give it a name 
+
+	<form #mathsform="ngForm">
+
+	</form>
+
+4. in the calculation.component.ts, import FormsModule 
+	imports: [FormsModule],
+	import { FormsModule } from '@angular/forms';
+
+5. lets design the form in .html
+
+<form #mathsform="ngForm">
+    <p> First Number </p>
+    <input type="number" name="num1" required ngModel/>
+    <p> Second Number </p>
+    <input type="number" name="num2" required ngModel/>
+    <p> <button type="submit" [disabled]=!mathsform.valid>Submit</button> </p>
+</form>
+
+6. Observe, we have used #mathsform="ngForm", this is the name of the name (can be anyting but meaningful)
+	which will be used to access the values inside the form from .ts file
+	also we are useing ngModel for every control, which makes it a property of the form
+
+7. in the .ts file let us access the form and do the calculations
+	
+  additions =0;
+  subtractions =0;
+  multiplications =0;
+  divisions =0;
+	
+  calculate(formObj: any) 
+  {
+      this.additions = formObj.value.num1 + formObj.value.num2;
+      this.subtractions = formObj.value.num1 - formObj.value.num2;
+      this.multiplications = formObj.value.num1 * formObj.value.num2;
+      this.divisions = formObj.value.num1 / formObj.value.num2;
+  }
+
+8. <form #mathsform="ngForm" (ngSubmit)="calculate(mathsform)">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

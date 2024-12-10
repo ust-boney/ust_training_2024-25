@@ -1,0 +1,46 @@
+Custom pipe
+
+1. create a new pipe in the pipes folder
+2. ng g p greetings
+3. go to greetings.pipe.ts file, and ovserve the file, 
+		the class implements pipetransform interface
+		and we need transform method to change the format of the data
+
+4. erase the transform method, and we will write our own
+
+transform(value: string) {
+   return 'Hello ' + value
+ }
+
+5. lets use the pipe
+	in app.component.ts,under import add greetingspipe and make sure there is import line added
+
+6. use the pipe
+	{{ e.empName | greetings }}
+
+-----------------------------------------------------------------------------------------------------
+
+
+We want to display, Mr.empName if the empGender is Male or Female
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,15 @@
+
+<h1> Employee Details</h1>
+
+<div *ngFor="let e of employeedetails">
+    <div class="{{ e.isEmpPermenant ? 'permanentDiv' : 'noPermanentDiv'}}">
+        <h2> No   : {{e.empNo}} </h2>
+        <h2> Name : {{e.empName}} </h2>
+        <h2> Work : {{e.empDesignation}} </h2>
+        <h2> Pay  : {{e.empSalary}} </h2>
+        <h2> CTC  : {{e.empSalary*12}} </h2>
+        <h2> Is Permanent : <input type="checkbox" checked="{{e.isEmpPermenant ? 'checked' : ''}}"> </h2>
+        <hr/>
+    </div>
+
+</div>

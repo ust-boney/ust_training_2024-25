@@ -1,0 +1,11 @@
+div{
+    background-color: aquamarine;
+}
+
+.permanentDiv{
+    background-color: greenyellow;
+}
+
+.noPermanentDiv{
+    background-color: red;
+}

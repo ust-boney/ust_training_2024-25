@@ -1,0 +1,31 @@
+
+
+<!-- <h3> {{ firstName | uppercase }} </h3>
+<h3> {{ city | titlecase }}</h3>
+<h3> {{ empdetails | json }} </h3>
+<h3> {{ dateofjoining  }} </h3>
+<h3> {{ dateofjoining | date:'fullDate'}} </h3>
+<h3> {{ dateofjoining | date:'shortDate'}} </h3>
+<h3> {{ dateofjoining | date:'mediumDate'}} </h3>
+<h3> {{ dateofjoining | date:'longDate'}} </h3>
+<h3> {{ dateofjoining | date:'shortTime'}} </h3>
+<h3> {{ dateofjoining | date:'mediumTime'}} </h3>
+<h3> {{ dateofjoining | date:'longTime'}} </h3>
+<h3> {{ dateofjoining | date:'short'}} </h3>
+<h3> {{ dateofjoining | date:'medium'}} </h3>
+<h3> {{ dateofjoining | date:'long'}} </h3>
+<h3> {{ dateofjoining | date:'full'}} </h3>
+<h3> {{ dateofjoining | date:'fullDate'}} </h3> -->
+
+
+
+<table border="1">
+  <tr *ngFor="let emp of employeedetails">
+    <td>{{emp.empNo}}</td>
+    <td>{{emp.empName | salutation : emp.empGender }}</td>
+    <td>{{emp.empDesignation | uppercase}}</td>
+    <td>{{emp.empSalary | currency : 'EUR' : true}}</td>
+    <td>{{  emp.empSalary | bonus : emp.empDesignation | currency : 'EUR'}}  </td>
+    <td>{{emp.isEmpPermenant }}</td>
+  </tr>
+  </table>

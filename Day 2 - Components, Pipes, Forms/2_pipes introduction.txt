@@ -1,0 +1,26 @@
+Pipes in Angular
+------------------
+
+-- Pipes are using in .html file for formatting the data display	
+	eg - uppercase is a pipe, which will display data in uppercase
+		firstName:string = "Nikhil Shah"; (in.ts)
+		
+		<h4> {{ firstName | uppercase }}</h4> (.in html)
+		
+		output - NIKHIL SHAH
+
+-- There are lot of inbuilt pipes in Angular
+	uppercase, lowercase, titlecase
+	date, percentage, json, etc......
+
+
+-- We can also create custom pipe
+	ng g p pipename (command)
+	ng g p greetuser (example)
+
+	eg.firstName:string = "Nikhil Shah"; (in.ts)
+		
+		<h4> {{ firstName | greetuser }}</h4> (.in html)
+
+	expected output Hello and welcome Nikhil Shah
+

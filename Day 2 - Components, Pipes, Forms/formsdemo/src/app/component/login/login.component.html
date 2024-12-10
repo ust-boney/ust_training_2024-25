@@ -1,0 +1,13 @@
+
+
+<h1> User Login </h1>
+
+<form #loginForm="ngForm" (ngSubmit)="checkUserLogin(loginForm)">
+    <p> Username </p>
+    <input type="text" name="username" required ngModel/>
+    <p> Password </p>
+    <input type="password" name="password" required ngModel/>
+    <p> <button type="submit" [disabled]=!loginForm.valid>Submit</button> </p>
+</form>
+
+<h1 class="{{ isLoginSuccess ? 'loginsuccess' : 'loginfailure' }}"> {{ loginResult }} </h1>

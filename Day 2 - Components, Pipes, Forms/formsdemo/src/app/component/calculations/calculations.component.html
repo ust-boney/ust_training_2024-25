@@ -1,0 +1,19 @@
+
+<h1> Maths </h1>
+
+
+<form #mathsform="ngForm" (ngSubmit)="calculate(mathsform)">
+    <p> First Number </p>
+    <input type="number" name="num1" required ngModel/>
+    <p> Second Number </p>
+    <input type="number" name="num2" required ngModel/>
+    <p> <button type="submit" [disabled]=!mathsform.valid>Submit</button> </p>
+</form>
+
+<h1> First Number : {{ mathsform.value.num1 }}</h1>
+<h1> Second Number : {{ mathsform.value.num2 }}</h1>
+
+<p> Addition : {{additions}} </p>
+<p> Subtraction : {{subtractions}} </p>
+<p> Multiplication :{{multiplications}} </p>
+<p> Division :{{divisions}} </p>
