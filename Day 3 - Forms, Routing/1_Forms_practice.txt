@@ -1,0 +1,6 @@
+1. Create a new application, bankApp
+2. Create below components
+	Home
+	Register
+	IntrestCalculator
+3. in the home component, display Bank Name and Logo

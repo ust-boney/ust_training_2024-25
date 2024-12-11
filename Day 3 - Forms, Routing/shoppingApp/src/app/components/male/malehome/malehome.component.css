@@ -1,0 +1,13 @@
+div{
+    background-color: aquamarine;
+}
+
+ul {
+    list-style-type: none; /* Optional: removes bullets */
+    padding: 0; /* Optional: removes padding */
+  }
+  
+  li {
+    display: inline; /* Makes <li> items appear in one line */
+    margin-right: 10px; /* Optional: adds spacing between items */
+  }

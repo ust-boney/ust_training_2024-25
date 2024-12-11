@@ -1,0 +1,35 @@
+
+<!-- <div>
+    <h4> Register </h4>
+    <form #register="ngForm" (ngSubmit)="newRegistration(register)">
+
+            <input type="text" name="firstName" placeholder="First Name" ngModel> <br/>
+            <input type="text" name="lastName" placeholder="Last Name" ngModel> <br/>
+
+        <select name="city" ngModel>
+            <option value="Mumbai">Mumbai</option>
+            <option value="Pune">Pune</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Chennai">Chennai</option>
+            <option value="Hyderabad">Hyderabad/option>
+            <option value="Trivendrum">Trivendrum</option>          
+        </select><br/>
+
+            <input type="number" name="email" placeholder="Age" min="18" max="60"  ngModel><br/>
+        <input type="radio" name="needloanyes" value="yes" ngModel> Need Loan <br/>
+        <input type="radio" name="needloanyes" value="no" ngModel> No Need Loan <br/>
+
+        <input type="text" name="pancard" placeholder="Pancard" ngModel><br/>
+
+    </form>
+</div> -->
+
+<form #techForm="ngForm" (ngSubmit)="addNewTech(techForm)">
+    <input type="text" name="technology" 
+    placeholder="Technology Name" ngModel><br/>
+    <button type="submit">Add</button>
+</form>
+
+<ul>
+    <li *ngFor="let tech of technologyList">{{tech}}</li>
+</ul>

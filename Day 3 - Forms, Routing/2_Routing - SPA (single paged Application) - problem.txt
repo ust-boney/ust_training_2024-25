@@ -1,0 +1,52 @@
+Routing - SPA (single paged Application)
+-----------------------------------------------
+Problem
+
+A web page is made up of many pages
+	Home, about, contact, news, careers, login, register 
+	all this are pages
+
+A single page is made up of many files
+	.js file (multiple)
+	.css file (multiple)
+	.jpg file
+	.png file
+	etc....
+Thus when a user is requesting for a page, browser makes multiple roundtrips to server to get the files
+This is slowing the page render - lets say home page had 6 files, so total request are 7
+
+From home user went to contactus page, which again had 5 files, out of which 2 files were already same in home page, so browser will not go for the same, it will pick it from cache
+
+Now the problem is, if users wants to go back to home page, it will make 7 request again
+on laptops and desktops lots of files are saved in cache, thus it will make request for files again only 
+	when cache is cleared 
+
+but the problem is with users not on desktop/laptop
+Phones have limited memory for cache, users habbit are to clean and clear the cache many times in a day
+in such a case there will be roundtrips again, which slows down the rendering, consuming more user data
+
+--also if user gets disconnected from internet, none of the page will work
+
+------------However in angular we have a concept of routing, which will not do roundtrips
+	we create a single page for all the app information in a form of components
+
+	Navigaion between pages will be internal in the browser, it will connect to server only to refresh 	the data
+
+Else whole website is a single page (which contains all the components)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		

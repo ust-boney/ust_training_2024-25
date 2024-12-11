@@ -1,0 +1,112 @@
+
+
+
+				--Nested Routing--
+
+	1. Create a new application - shoppingAPP
+	2. in the app folder, create below folder structure
+			Components
+				male (this is folder not component) - have below components
+					malehome -- just display a image - 100px - 100px
+					Clothing
+					Accessories
+					Shoes
+				female (this is folder not component)- have below components
+					femalehome -- just display a image - 100px - 100px
+					Clothing
+					Accessories
+					Shoes
+				kids (this is folder not component)- have below components
+					kidshome -- just display a image - 100px - 100px
+					clothing
+					Toys
+					shoes
+				userprofile - This is a folder					
+					userhome - display a message - feature coming soon in h1
+					payment (this is a folder) - below are compoennts in payment
+					        paymenthome - display a message - feature coming soon in h1
+						CreditCard  (component)
+						UPI (component)
+						NetBanking
+						Wallet	
+				cart - this is a component 
+					display a message - feature coming soon
+		3. create and configure routes
+
+-------------------------------------------------------------------
+	 1.Parameterised routing
+
+		we will want to display list of products on many components
+
+		male clothing will have list of products in a table
+
+
+		PId  pName pcategoty price discount offerprice
+
+		page gets full already with this many information
+		and so we are not able to display
+		image, descriptions, advantages, dilevery info, price breakup, manufacturing info etc..
+		
+		thus what can be done as well is
+		user can click on Pid or pName, 
+			we take that id and navigate to a new component - productDetails
+			where we show lot of information about the product
+			Thus we will do parameter routing
+
+	   2. user cannot activate userprofile, payment, cart if user is not logged in 
+		we have a concept - Guards which will stop user to access the routes if they are not authenticated
+
+-------------------------------------------------------------------------------------------------------------------
+		Thus in the same application let us have the setup ready 
+		1. in the male, female and kids component 
+			under clothing
+			      accessories
+			     shoes
+			for all the 9 components, add a json array object
+				productdetails = [{
+			pId:101, pName:, pCategory,pPrice,pIsInStock
+		}]			
+
+		display 3 product on each catagegory of male, female and kids
+
+
+		2. create a component productdetails, we will use this to display the products details
+			
+		3. create a component Login, with UI of username and password
+
+
+
+
+
+
+
+
+
+
+
+
+
+			
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
