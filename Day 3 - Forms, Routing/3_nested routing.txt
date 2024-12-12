@@ -55,7 +55,6 @@
 
 	   2. user cannot activate userprofile, payment, cart if user is not logged in 
 		we have a concept - Guards which will stop user to access the routes if they are not authenticated
-
 -------------------------------------------------------------------------------------------------------------------
 		Thus in the same application let us have the setup ready 
 		1. in the male, female and kids component 
@@ -66,9 +65,7 @@
 				productdetails = [{
 			pId:101, pName:, pCategory,pPrice,pIsInStock
 		}]			
-
 		display 3 product on each catagegory of male, female and kids
-
 
 		2. create a component productdetails, we will use this to display the products details
 			

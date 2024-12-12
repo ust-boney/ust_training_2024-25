@@ -1,0 +1,25 @@
+1. Create a new application shoppingApp
+2. you will have a service - productManagement
+	which will make a call to product to
+	https://fakestoreapi.com/products
+
+	and display the data in productlist component
+
+3. Id, title, price, category": "men's clothing
+
+4. Add 1 more component to the application productview, this will display other detail about the produt 
+5.configure parameter routing for id, when user clicks on id in productlist component, navigate to productview and display the ID
+
+
+(I will help you with this, but if you want try u can)
+6. We will make call back to service and get the detail of the product 
+
+	
+	https://fakestoreapi.com/products/id
+
+--------------------------------------------------------------------------------------------------------------------------------------
+						Break : 4:20 :4:40
+	
+
+	
+		

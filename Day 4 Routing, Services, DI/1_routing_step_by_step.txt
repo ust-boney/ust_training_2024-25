@@ -1,0 +1,110 @@
+1. Create a new project for parameterised routing
+	ng new paratemerisedRouting_demo
+2. create a new component folder in src\app
+3. create 2 components
+	ng g c accountlist
+	ng g c accountdetails
+
+4. add some data to accountlist
+	 accList = [
+      {accNo:101,accName:'Nikhil',accBalance:10000,accType:'Savings'},
+      {accNo:102,accName:'Rahul',accBalance:10000,accType:'Savings'},
+      {accNo:103,accName:'Karan',accBalance:10000,accType:'Current'},
+      {accNo:104,accName:'Priya',accBalance:10000,accType:'Savings'},
+      {accNo:105,accName:'Riya',accBalance:10000,accType:'Savings'},
+      {accNo:106,accName:'Riya',accBalance:10000,accType:'Current'},
+      {accNo:107,accName:'Mohan',accBalance:10000,accType:'Savings'}]
+
+}
+
+5. Display the data in html
+	<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Account Number</th>
+            <th scope="col">Account Holder</th>
+            <th scope="col">Account Balance</th>
+            <th scope="col">Account Type</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of accList">
+                        <td> <a [routerLink]="['/account',user.accNo]"> {{ user.accNo }} </a>  </td>         
+            <td>{{ user.accName }}</td>
+            <td>{{ user.accBalance }}</td>
+            <td>{{ user.accType }}</td>
+        </tr>
+    </tbody>
+</table>
+
+---Observe [routerLink]="['/account',user.accNo]"> - we have used bracket on both side and passed 2nd value
+
+6. we will need to configure the routes.ts
+
+ {path:'',redirectTo:'home',pathMatch:'full'},
+    {path:'accountslist',component:AccoutslistComponent},
+    {path:'account/:accNo',component:AccoutsdetailsComponent}
+
+observe line 3, we added : for parameter
+
+7. lets navigate and display the value on other component
+	accountdetails.component.ts
+
+	a. add 	implements OnInit to the class
+	export class AccoutsdetailsComponent implements OnInit
+
+	b. add a variable 
+		 user_accNo:any;
+
+	c. add a constructer with ActivatedRoute
+		constructor(private route:ActivatedRoute) {
+
+  		}
+	d.add a ngOnInitmethod
+
+		ngOnInit(): void {
+    this.user_accNo = this.route.snapshot.paramMap.get('accNo');
+    //once we have the account number seleced by user, we can 
+    //fetch more details about accNo 101 from datasource (json object array or rest api call and get more 	details)
+  }
+
+	
+
+
+8. Display the data in accountdetails.component.html
+	
+<h1> Account Number: {{ user_accNo }}</h1>
+	user_account is declared in .ts
+
+
+9. app.component.html
+
+<ul>
+  <li> <a routerLink="accountslist">Accounts List</a> </li>
+</ul>
+
+<!-- <app-accoutslist></app-accoutslist> -->
+
+
+<router-outlet></router-outlet>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

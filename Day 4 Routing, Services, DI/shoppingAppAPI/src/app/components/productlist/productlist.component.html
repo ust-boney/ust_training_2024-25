@@ -1,0 +1,9 @@
+
+
+<table>
+    <tr *ngFor="let product of _productManagementSer.productList">
+        <td> <a [routerLink]="['/productview',product.id]">  {{product.id}} </a></td>
+        <td>{{product.title}}</td>
+        <td>{{product.price}}</td>
+        <td>{{product.category}}</td>        
+</table>

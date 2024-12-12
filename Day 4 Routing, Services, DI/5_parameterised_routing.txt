@@ -1,0 +1,42 @@
+1. in the sevice create 2 more variable
+	
+  productToView:any; //this will have the id of user clikd from productlist
+  detailedProduct:any; //this we will search the product again from the list
+
+2. create a method to search the product
+
+searchProductToView(pno:any)
+  {
+    this.productToView = pno;
+    console.log(this.productToView);
+    for(var i=0;i<this.productList.length;i++)
+    {
+      if(this.productList[i].id==this.productToView)
+      {
+        this.detailedProduct=this.productList[i];
+        console.log(this.detailedProduct);
+      }
+    }
+
+3. in the productview.component.ts
+	add a varible and service ref object use DI
+
+	
+  selectedProduct:any;
+  _productManagementSer:ProductmanagementserService;
+
+	 selectedProduct:any;
+  _productManagementSer:ProductmanagementserService;
+
+  constructor(private route:ActivatedRoute,productManagementSer:ProductmanagementserService)
+  {
+    this._productManagementSer = productManagementSer;
+  }
+
+  ngOnInit(): void {
+    this.selectedProduct = this.route.snapshot.paramMap.get('pid');
+    
+    this._productManagementSer.searchProductToView(this.selectedProduct);
+  }
+
+	

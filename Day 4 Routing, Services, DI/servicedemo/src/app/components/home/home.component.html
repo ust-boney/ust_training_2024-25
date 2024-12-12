@@ -1,0 +1,9 @@
+<p>home works!</p>
+
+
+<h1> {{ _greetSer.applicationName }}</h1>
+<button (click)="_greetSer.greetings()">Greet</button>
+
+<ul>
+    <li *ngFor="let name of _greetSer.teamMembers">{{ name }}</li>
+</ul>

@@ -1,0 +1,31 @@
+plz configure routing in the app for 4 components
+4 links u will have
+	Home (default)
+	About
+	Electronics
+	Clothing
+
+	in the data, add more details for everyproduct
+	img url, country, color, weight, days_to_diliver
+
+
+1. lets have list of 10 products 
+	pId, pname, pcategory,pprice,pisinstock
+
+	for category, use clohing and electronics
+
+2. add 2 components clothing and electronics
+	we will want to display electronics when user clicks on electronics and same for cothing
+	 
+
+---add a new component - productView
+
+configure parameter routing, in electronics and clothing when you click on product 
+	navigate to productView with pId and display the product details
+	(for this, we will have write a function in service which will search the product
+	from list - lets not do it now, just print the productid as of now)
+	once we do more of service after lunch we will display the product details
+=================================
+	Time till 1:35 
+
+		Lunch 1:35 - 2:35 

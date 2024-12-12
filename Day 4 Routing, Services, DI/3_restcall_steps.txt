@@ -1,0 +1,98 @@
+1. Create a new application respapicall_demo
+2.add 2 folder components and services in src\app folder
+	ng g c postdetails
+	ng g s externaldata
+3. in the service, lets make a call to 
+	https://jsonplaceholder.typicode.com/posts
+
+	we will create HttpClient variable and make call, use DI for performance and easy maintainance
+
+	
+  _http:HttpClient;
+  postdetails:any;  //to hold the result
+
+  constructor(http:HttpClient) { 
+    this._http=http;
+  }
+  
+  getPostDetails(){
+    this._http.get('https://jsonplaceholder.typicode.com/posts').subscribe(result =>{
+      this.postdetails=result;
+     // console.log(this.postdetails);
+      //noalert('Got the data');
+    })
+  }
+} 
+
+
+4. use the service in component and display the data
+	
+	a. .ts file
+	 _makeapicallsSER:ExternaldataService;
+
+    constructor(_makecalls:ExternaldataService) { 
+
+      this._makeapicallsSER = _makecalls;
+    }
+5. html file
+
+	<p>postdetails works!</p>
+
+
+<button (click)="_makeapicallsSER.getPostDetails()">Get Post Details</button>
+
+<table border="1">
+    <tr *ngFor="let p of _makeapicallsSER.postdetails">
+        <td>{{p.id}}</td>
+        <td> {{ p.userId }}</td>
+        <td>{{p.title}}</td>
+        <td>{{p.body}}</td>
+
+    </tr>
+</table>
+
+
+6. We need to register HttpClient for DI 
+
+	in app.config.ts
+		under provider section, include
+
+		provideHttpClient()
+
+
+export const appConfig: ApplicationConfig = {
+  providers: [provideZoneChangeDetection({ eventCoalescing: true }), 
+            provideRouter(routes),provideHttpClient()]
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	

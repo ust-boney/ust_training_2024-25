@@ -1,0 +1,21 @@
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Account Number</th>
+            <th scope="col">Account Holder</th>
+            <th scope="col">Account Balance</th>
+            <th scope="col">Account Type</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of accList">
+            <!-- <th scope="row"><a [routerLink]=['account',user.accNo]> {{ user.accNo }} </a></th> -->
+            <td> <a [routerLink]="['/account',user.accNo]"> {{ user.accNo }} </a>  </td>         
+            <td>{{ user.accName }}</td>
+            <td>{{ user.accBalance }}</td>
+            <td>{{ user.accType }}</td>
+        </tr>
+    </tbody>
+</table>
