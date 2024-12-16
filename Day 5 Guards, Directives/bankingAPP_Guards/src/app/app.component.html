@@ -1,0 +1,23 @@
+
+
+
+<ul>
+  <li><a routerLink="home">Home</a></li>
+  <li><a routerLink="accountdetails">Account Details</a></li>
+  <li><a routerLink="transfer">Transfer</a></li>
+  <li><a routerLink="about">About</a></li>
+  <li><a routerLink="contact">Contact</a></li>
+
+
+  <span *ngIf="_validateUserSer.isUserValid; else loginTemplate">
+     <li><a routerLink="home" (click)="_logout()">Logout</a></li>
+  </span>
+
+  <ng-template #loginTemplate>
+    <li><a routerLink="login">Login</a></li>
+  </ng-template>
+
+ 
+</ul>
+
+<router-outlet></router-outlet>

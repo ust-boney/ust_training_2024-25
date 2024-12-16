@@ -1,0 +1,28 @@
+we need a shoppingapp 
+
+we will have below components
+1. home
+2. productslist == folder
+	productsHome to display below link
+	Mens (display 3 products - pid, pname, pprice) -- data will come from service 
+	Female(display 3 products - pid, pname, pprice) -- data will come from service
+	Kids (display 3 products - pid, pname, pprice) -- data will come from service
+	display add button with every product which will add the product to cart
+	make button visible only where user is logged in else no button
+
+	service name : productservice 
+3. ProductManagement
+	addproduct (form - which will submit data to .ts and ts will call the sevice mehod)
+	deleteproduct
+	editproduct
+4. Cart -- this will have a  array object which will display the products in card and display the cart value
+
+home is free, productlist is free
+productmanagement is only admin (username is 'ProductAdmin' and password is 'productadmin@434355')
+		if this is valid then only can give access to productmanagemnet
+
+cart is accessible to all the users which are valid - lets have a user, username = 'Nikhil' password='P@3458'
+	then only allow access to cart
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+	Lunch : 1:30 - 2:30

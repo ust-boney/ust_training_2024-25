@@ -1,0 +1,56 @@
+isAdminLoggedIn:boolean = false;
+isUserLoggedIn:boolean = false;
+isCanActive:boolean = false;
+
+checkLogin(username, password):boolean
+{
+	if(username=='ProductAdmin' && password=='productadmin@434355')
+	{
+		this.isAdminLoggedIn = true;
+		isCanActive = true;
+		return true;
+	}
+	else { 
+		isAdminLoggedIn = false
+		return false; 
+	}
+
+	if(username=='Nikhil' && password=='Nikhil@1234')
+	{
+		this.isUserLoggedIn = true;
+		isCanActive = true;
+		return true;
+	}
+	else{ 
+		this.isUserLoggedIn = false;
+		return false;
+	}
+}
+----------
+canActivate():Boolean
+{
+isCanActive = true;	
+}
+-------------
+	so how does application decide is user a admin or no
+	in the HTML where you are createing all the routes (app.component.html)
+			we will need to create multiple ng-templates and dislplay the templates to users accordingly
+
+
+	<span *ngIf="isUserLoggedIn ; else admintemplate>
+		display cart link which navigates to cart
+	</span>
+
+	<ng-template #admintemplate>
+		display the routerlinks for admin - productmanage with add, update and delete
+	</ng-template>
+
+
+
+
+
+
+
+
+
+

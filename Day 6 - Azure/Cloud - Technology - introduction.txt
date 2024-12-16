@@ -1,0 +1,139 @@
+Cloud - Technology
+
+1. On Demand
+2. Limited Period 
+		Right now on Amazon - 20CR 
+		request to server every minute - 20 lakhs 
+			Thus they have a setup to handle - 60 lakhs request every minute
+
+			Problem : during festive season / launch of new product
+				during this time, request per minute crosses 80/90 lakhs 
+
+		thus servers are not able to face this requirement
+
+		thus for this, they will have to add new hardware
+			buy new HW (huge investment) - 4 times to handle 80 lakhs request PM - 320 
+				This means a very high hardware, we pay depreciation, maintenance, 			electricity, man power etc...
+
+		thus why not have a solution on demand and for a time they need, remotely, anywhere in the
+		world
+
+3. have services for which they are not expert, AI ML services today, team at UST wants to come up with a POC
+
+
+
+
+
+Thus the idea of Remote hardware on demand for limited period as per need came up 
+
+in which they opened data centers - real big and huge, with tons of hardware and share it over internet
+	this hardware will have support for more and more service
+
+
+	so cloud is a technology to demand any service (hardware/software) both for required time
+
+	This services are categorised in 3 categories
+
+		1. SAAS - Software as a service 
+				create any solution as a software - eg. db server, virtual machine
+		2. PASS - Platform as a service - gives you a platform made up of software installed
+				and you can put ur solutions on this
+				(create a web server and host website from any technology)
+		3. IAAS - Infrastructure as a service
+				buy the hardware
+	--------------- easy way to understand and remember this 
+		SAAS - order a food on demand - Zomato (you do not have control on quality)
+		     - walk into a restaurant and order from wide variety - you do not have control on how 			it is been cooked
+			problem - control, quality 
+	
+		PASS - you get home food everyday 
+			- control or over the quality
+
+		IAAS  - buy your own vegetables and cook it you self
+				you take care and control of quality 
+	---- SAAS is a shared kitchen 
+	---- PAAS is a kitchen at home, but you do not cook, you get served by a family member
+	---- IAAS 100% control
+		--IAC (with devops) - Infrastructure as a code
+
+
+	Types of cloud
+
+	Public - Azure, Amazon, GCP
+	Private - our own data center
+	Hybrid - half solution on own data center and half on cloud
+
+	------------------------------------------
+	IAC - create or deploy a complete solution using a config file (.json or .yml)
+	Eg. config file to create a virtual machine for us
+		name of the machine	
+		OS
+		Hardware
+		Security 
+		Username, password
+		pre-installed software
+
+	everything mentioned a config file (submition time is 1/2 seconds)
+
+	we submit / upload this config file to some service running in a data center
+		also what if you need 20 such machines
+	also provide info in the file to shut down machines at 6:OO PM everyday and auto start at 8:45 everyday
+
+----------------- we will learn this on Microsoft Azure
+	where we get 200+ services accoss 300+ data centers across the world
+		India has 3 data centers (West - Nagpur)
+					  South  - Chennai 
+					  Center - Delhi/gurgoan)
+
+		eg. for most of the users which are from UK, it will be a great idea to host a website in UK data center
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

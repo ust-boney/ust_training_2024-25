@@ -1,0 +1,26 @@
+Guard Service
+------------------------
+	This will guard the components - do not allow navigation to a component if they are 
+	not authorised
+	They need to submit the identity
+		ways to submit the identity
+			username and password
+			certificate installed on their machines
+			IPaddress
+
+------------------------------------------------------------------------------------------------
+
+1. Create a new application - bankingAPP_Guards
+2. create the components folder in src\app
+3. add below components
+	Home
+	AccountDetails (just create a json obj in .ts and display in html - accNo, accname,acctype,accbal)
+	TransferFunds
+	About
+	Contact
+	Login (create a form with username and password textboxes)
+
+	user is free to visit, Home, About, Contact and Login
+	BUT for AccountDetails and TranferFunds they need to be loggedin 
+
+	configure routes for the app, give links on home page

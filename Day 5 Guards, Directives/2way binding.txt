@@ -1,0 +1,23 @@
+<select [(ngSwitch)]="country">  
+    <option *ngSwitchCase="india">...</option>  
+    <option *ngSwitchCase="China">...</option>  
+    <option *ngSwitchCase="germany">...</option>  
+    <option *ngSwitchDefault>...</element>  
+</container_element>   
+
+
+
+{{ country }}  -- when user selects a country from above drop down the value will change   
+		---this is 1 way binding
+
+
+	however if we have a textbox
+
+
+<input type=text name=country value={{ country }} [(ngModel)]/>
+
+
+However this is a text box, user can also enter a value which is not present in the drop down !!
+we cannot say user plz do not type
+ thus we need a 2 way binding
+
