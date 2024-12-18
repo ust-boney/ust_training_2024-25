@@ -1,0 +1,129 @@
+1. Open vs code
+2. file -> open folder -> point to day 1 folder
+3. cntrl + ~ (opens the terminal)
+4. choose command promt -> ng new empapp (create a new app, choose css and N)
+5. ng serve (test the app on browser)
+6. from explorer (left side, first option) navigate to src -> app -> app.component.html
+								remove everything (cntrl A, delete)
+						mention
+						<h1> Welcome to Angular </h1>
+						<h4> Developer : Nikhil Shah</h4>
+
+7. navigate to app.component.css -> 
+h1
+{
+    text-align: center;
+    background-color: lime;
+}
+------------------------------------------------------------------------------------------
+	lt us make variables, use data types and see a typescript in action
+
+8. in app.component.ts,read and observe the file, top lines are import modules
+
+	line 10 starts a class, which is decorated by a decorater @Component,which has the name of component, templateurl and styleurl which links the app.component.html and app.component.css
+
+9. make changes in the class, remove tile and replace with
+	
+  appliacationName:string = 'Employee Management App';
+  frameworkName:string = 'Angular';
+  developerName:string = 'Nikhil Shah';
+  teamSize:number = 20;
+  isLive:boolean = false;
+
+10. let us display the above values in app.component.html
+
+	<div>
+ 	 <h3> Appliation Name : {{ appliacationName }}</h3>
+ 	 <h3> Framework Name : {{ frameworkName }}</h3>
+ 	 <h3> Developer Name : {{ developerName }}</h3>
+         <h3> Team Size : {{ teamSize }}</h3>
+         <h3> Is Live : {{ isLive }}</h3>
+       </div>
+11. let us make changes to app.component.css
+	div{
+    background-color: lightcoral;
+    color: blueviolet;
+	}
+---------------------------
+let us see some events
+12.
+in app.component.ts add, 2 functions 
+
+
+  greetUser()
+  {
+    alert("Hello User");
+  }
+  changeAppName()
+  {
+    this.appliacationName ="New Employee Portal for People management";
+  }
+
+13. let us call this functions with button click from app.component.html file
+	
+<button (click)="greetUser()"> Greet User </button>
+<button (click)="changeAppName()"> Change App Name </button>
+
+	save the files, click the buttons and see the change
+
+---------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
