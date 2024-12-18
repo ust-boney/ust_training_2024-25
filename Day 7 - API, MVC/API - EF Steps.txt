@@ -1,0 +1,111 @@
+1. VM
+2. DB
+3. Storage Account
+
+-----------------------
+1. Create a new virtual machine with windows 11 OS and 16 Gb ram - same 1 which we created yesterday 
+2. install sql server management studio in the vm
+3. create a database server using azure portal
+4. connect to the server using SSMS
+5. creat a database bankingDB - change the db priceing tier to basic
+	create a table - accountsInfo 
+			accNo,accName,ccType,accBalance,accIsIctive
+		insert 5 recotds
+
+6. We wish to create a rest api service using .net core 
+which will perform CRUD operations on bankingDB database running on the server
+
+7. we will have to download and install Visual studio 2022 community edition
+	options selected 1,2,6 and data storage and processing
+
+8. we will start the development as per step 6
+
+	a. start visual studio, click create new project
+	b. in the search box top, type rest, we then select ASP.Net core web api select next
+	c. give a name to your application,I gave bankingAPI,next and create the project
+	d. we will need to install nuget packages for communication with database, we will use standard pattern called ORM - object reational mapping
+		called as Entity framework in .net 
+		below package needs to be installed, 
+		right click solution explorer, manage nuget package
+
+		Microsoft.EntityFrameworkCore.tools
+		Microsoft.EntityFrameworkCore.Design
+		Microsoft.EntityFrameworkCore.sqlserver
+		Microsoft.EntityFrameworkCore
+9. we will need to fire a command which will download POCO classes
+
+	copy the database connection string
+
+	Server=tcp:bankingserver.database.windows.net,1433;Initial Catalog=bankingDB;Persist Security Info=False;User ID=sqladmin;Password={your_password};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;
+
+we will have to apply password on this connection string
+
+	tool --> nuget package manager --> package manager console
+
+	Scaffold-DbContext "Server=tcp:bankingserver.database.windows.net,1433;Initial Catalog=bankingDB;Persist Security Info=False;User ID=sqladmin;Password=Passwor@1234;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;" -Provider Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
+
+	This will create a folder - models and create files
+		1 class file for every table, which will have properties mapped to columns in the table
+		1 class file called dbcontext which takes care of connection and crud operations
+
+
+10. lets create a controller for accountsInfo table 
+	right click on controller folder, add controller, from left choose api, and then choose api controller with action using entityframework
+	from the pop up, choose below options
+	for - Model choose name of the table
+	for - Dbcontext - choose dbcontext file
+	give a proper name to controller in the last text box, note it should end with controller
+	click add
+11. instantiate new object of DBcontext and comment the constructor
+		
+        private readonly BankingDbContext _context = new BankingDbContext();
+
+        //public accountsController(BankingDbContext context)
+        //{
+        //    _context = context;
+        //}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	--------------------------------------------------------------------------------------------------------------------------------------

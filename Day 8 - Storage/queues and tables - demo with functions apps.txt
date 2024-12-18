@@ -1,0 +1,29 @@
+
+
+
+
+-----------------------------------------------------------------------------------------------------
+Queues
+	this is the request processing service
+		listen to request, store the request and process the request based on program
+Table
+	this is key and a value pair table, with support for sql as well as nonsql data
+
+	eg. for AIML, the table was used to collet info from applicants
+		it had a column to upload identity
+			they can upload
+			PAN
+			Aadhar
+			Passport
+			Electricity bill
+			voting card etc..
+-------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+

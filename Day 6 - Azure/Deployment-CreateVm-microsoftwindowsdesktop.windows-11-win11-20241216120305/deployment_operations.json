@@ -1,0 +1,70 @@
+[
+  {
+    "id": "/subscriptions/96ab9d48-12c1-4157-8c60-6b915ce0a604/resourceGroups/rg_training/providers/Microsoft.Resources/deployments/CreateVm-microsoftwindowsdesktop.windows-11-win11-20241216120305/operations/0164696A37241485",
+    "operationId": "0164696A37241485",
+    "properties": {
+      "provisioningOperation": "Create",
+      "provisioningState": "Succeeded",
+      "timestamp": "2024-12-16T06:57:40.2487461Z",
+      "duration": "PT6.6682119S",
+      "trackingId": "bd3e44bc-81b9-46b6-a68a-b8182ab51e56",
+      "statusCode": "OK",
+      "targetResource": {
+        "id": "/subscriptions/96ab9d48-12c1-4157-8c60-6b915ce0a604/resourceGroups/rg_training/providers/Microsoft.Network/networkInterfaces/trainer-vm27",
+        "resourceType": "Microsoft.Network/networkInterfaces",
+        "resourceName": "trainer-vm27"
+      }
+    }
+  },
+  {
+    "id": "/subscriptions/96ab9d48-12c1-4157-8c60-6b915ce0a604/resourceGroups/rg_training/providers/Microsoft.Resources/deployments/CreateVm-microsoftwindowsdesktop.windows-11-win11-20241216120305/operations/3825E217351DB7F0",
+    "operationId": "3825E217351DB7F0",
+    "properties": {
+      "provisioningOperation": "Create",
+      "provisioningState": "Succeeded",
+      "timestamp": "2024-12-16T06:57:33.2603691Z",
+      "duration": "PT6.7936085S",
+      "trackingId": "26aad67e-d855-431b-a471-1e9a6f78534f",
+      "statusCode": "OK",
+      "targetResource": {
+        "id": "/subscriptions/96ab9d48-12c1-4157-8c60-6b915ce0a604/resourceGroups/rg_training/providers/Microsoft.Network/publicIpAddresses/trainer-vm-ip",
+        "resourceType": "Microsoft.Network/publicIpAddresses",
+        "resourceName": "trainer-vm-ip"
+      }
+    }
+  },
+  {
+    "id": "/subscriptions/96ab9d48-12c1-4157-8c60-6b915ce0a604/resourceGroups/rg_training/providers/Microsoft.Resources/deployments/CreateVm-microsoftwindowsdesktop.windows-11-win11-20241216120305/operations/C1EA751016DAB8A1",
+    "operationId": "C1EA751016DAB8A1",
+    "properties": {
+      "provisioningOperation": "Create",
+      "provisioningState": "Succeeded",
+      "timestamp": "2024-12-16T06:57:32.094781Z",
+      "duration": "PT5.6280204S",
+      "trackingId": "56452f7a-3d46-48b2-9b94-11ad53a945d2",
+      "statusCode": "OK",
+      "targetResource": {
+        "id": "/subscriptions/96ab9d48-12c1-4157-8c60-6b915ce0a604/resourceGroups/rg_training/providers/Microsoft.Network/virtualNetworks/vm_network",
+        "resourceType": "Microsoft.Network/virtualNetworks",
+        "resourceName": "vm_network"
+      }
+    }
+  },
+  {
+    "id": "/subscriptions/96ab9d48-12c1-4157-8c60-6b915ce0a604/resourceGroups/rg_training/providers/Microsoft.Resources/deployments/CreateVm-microsoftwindowsdesktop.windows-11-win11-20241216120305/operations/36E538328B759E37",
+    "operationId": "36E538328B759E37",
+    "properties": {
+      "provisioningOperation": "Create",
+      "provisioningState": "Succeeded",
+      "timestamp": "2024-12-16T06:57:33.5214879Z",
+      "duration": "PT7.0547273S",
+      "trackingId": "2b3e2550-8ef8-49d6-a773-f6075e26b355",
+      "statusCode": "OK",
+      "targetResource": {
+        "id": "/subscriptions/96ab9d48-12c1-4157-8c60-6b915ce0a604/resourceGroups/rg_training/providers/Microsoft.Network/networkSecurityGroups/trainer-vm-nsg",
+        "resourceType": "Microsoft.Network/networkSecurityGroups",
+        "resourceName": "trainer-vm-nsg"
+      }
+    }
+  }
+]

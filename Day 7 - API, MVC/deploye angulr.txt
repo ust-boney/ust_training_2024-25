@@ -1,0 +1,31 @@
+
+
+
+
+
+	Azure app service 
+		respiapi
+		mvc app
+
+	Deploy Angular app on azure
+
+-----------------------------------------------------------------------------------
+1. create a new angular app
+	ng new festiveapp
+2. we need to build the app for deployment
+	ng build
+			this will give the dist folder, which will have festiveapp folder,which  needs to be deployed
+3.create  a new app service on azure
+	with plaform as node, choose a code and windows
+
+4. we will need to deploy this from visual studio code, open the above project with vs code
+
+5. vs code needs to be connected to your azure account for deployment
+
+6. for this, we will add an extention on VS - azure app service and it will ask us to login
+
+7. you will see the app created in step 3 under app service
+
+8. right click on the app and click deploy to web app, this will open a search box, which will have browse option, click browse and select app folder from      	under the dist folder
+
+9. from the portal, under your app, search configuration

@@ -1,0 +1,10 @@
+sp=racwli&st=2024-12-18T07:02:49Z&se=2024-12-27T15:02:49Z&spr=https&sv=2022-11-02&sr=c&sig=ZZyt%2BTLI5lDq2xOvVz%2FtzNtyQrRNmwglqK6ZeqTQG4o%3D
+
+https://trainingstorageaccust.blob.core.windows.net/images?sp=racwli&st=2024-12-18T07:02:49Z&se=2024-12-27T15:02:49Z&spr=https&sv=2022-11-02&sr=c&sig=ZZyt%2BTLI5lDq2xOvVz%2FtzNtyQrRNmwglqK6ZeqTQG4o%3D
+
+
+
+1.connect to my storage container from azure storage explorer
+2. create a new folder with your name and upload something inside it (img, .txt, word, video etc..)
+	I will be able to check this on my portal
+3. try to delete something from any folder

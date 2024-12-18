@@ -1,0 +1,7 @@
+Scaleing
+
+	increase the hardware capacity based on the load of on server
+
+	2 types 
+		Vertical scaling  ---
+		Horizontal scaling

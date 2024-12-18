@@ -1,0 +1,271 @@
+{
+  "id": "/subscriptions/96ab9d48-12c1-4157-8c60-6b915ce0a604/resourceGroups/rg_training/providers/Microsoft.Resources/deployments/CreateVm-microsoftwindowsdesktop.windows-11-win11-20241216120305",
+  "name": "CreateVm-microsoftwindowsdesktop.windows-11-win11-20241216120305",
+  "type": "Microsoft.Resources/deployments",
+  "tags": {
+    "primaryResourceId": "/subscriptions/96ab9d48-12c1-4157-8c60-6b915ce0a604/resourcegroups/rg_training/providers/Microsoft.Compute/virtualMachines/trainer-vm",
+    "marketplaceItemId": "Microsoft.VirtualMachine-ARM",
+    "provisioningHash": "SolutionProvider"
+  },
+  "properties": {
+    "templateHash": "234244710267811141",
+    "parameters": {
+      "location": {
+        "type": "String",
+        "value": "eastus"
+      },
+      "networkInterfaceName": {
+        "type": "String",
+        "value": "trainer-vm27"
+      },
+      "enableAcceleratedNetworking": {
+        "type": "Bool",
+        "value": true
+      },
+      "networkSecurityGroupName": {
+        "type": "String",
+        "value": "trainer-vm-nsg"
+      },
+      "networkSecurityGroupRules": {
+        "type": "Array",
+        "value": [
+          {
+            "name": "RDP",
+            "properties": {
+              "priority": 300,
+              "protocol": "TCP",
+              "access": "Allow",
+              "direction": "Inbound",
+              "sourceAddressPrefix": "*",
+              "sourcePortRange": "*",
+              "destinationAddressPrefix": "*",
+              "destinationPortRange": "3389"
+            }
+          }
+        ]
+      },
+      "subnetName": {
+        "type": "String",
+        "value": "default"
+      },
+      "virtualNetworkName": {
+        "type": "String",
+        "value": "vm_network"
+      },
+      "addressPrefixes": {
+        "type": "Array",
+        "value": [
+          "10.0.0.0/16"
+        ]
+      },
+      "subnets": {
+        "type": "Array",
+        "value": [
+          {
+            "name": "default",
+            "properties": {
+              "addressPrefix": "10.0.0.0/24"
+            }
+          }
+        ]
+      },
+      "publicIpAddressName": {
+        "type": "String",
+        "value": "trainer-vm-ip"
+      },
+      "publicIpAddressType": {
+        "type": "String",
+        "value": "Static"
+      },
+      "publicIpAddressSku": {
+        "type": "String",
+        "value": "Standard"
+      },
+      "pipDeleteOption": {
+        "type": "String",
+        "value": "Delete"
+      },
+      "virtualMachineName": {
+        "type": "String",
+        "value": "trainer-vm"
+      },
+      "virtualMachineComputerName": {
+        "type": "String",
+        "value": "trainer-vm"
+      },
+      "virtualMachineRG": {
+        "type": "String",
+        "value": "rg_training"
+      },
+      "osDiskType": {
+        "type": "String",
+        "value": "StandardSSD_LRS"
+      },
+      "osDiskDeleteOption": {
+        "type": "String",
+        "value": "Delete"
+      },
+      "virtualMachineSize": {
+        "type": "String",
+        "value": "Standard_D4s_v3"
+      },
+      "nicDeleteOption": {
+        "type": "String",
+        "value": "Delete"
+      },
+      "hibernationEnabled": {
+        "type": "Bool",
+        "value": false
+      },
+      "adminUsername": {
+        "type": "String",
+        "value": "nikhilshah"
+      },
+      "adminPassword": {
+        "type": "SecureString"
+      },
+      "patchMode": {
+        "type": "String",
+        "value": "AutomaticByOS"
+      },
+      "enableHotpatching": {
+        "type": "Bool",
+        "value": false
+      },
+      "autoShutdownStatus": {
+        "type": "String",
+        "value": "Enabled"
+      },
+      "autoShutdownTime": {
+        "type": "String",
+        "value": "18:00"
+      },
+      "autoShutdownTimeZone": {
+        "type": "String",
+        "value": "India Standard Time"
+      },
+      "autoShutdownNotificationStatus": {
+        "type": "String",
+        "value": "Enabled"
+      },
+      "autoShutdownNotificationLocale": {
+        "type": "String",
+        "value": "en"
+      },
+      "autoShutdownNotificationEmail": {
+        "type": "String",
+        "value": "nikhilshah.net@hotmail.com"
+      }
+    },
+    "mode": "Incremental",
+    "debugSetting": {
+      "detailLevel": "None"
+    },
+    "provisioningState": "Running",
+    "timestamp": "2024-12-16T06:57:31.2746605Z",
+    "duration": "PT7.2752057S",
+    "correlationId": "01e3a3e8-833b-4739-80f0-04df67bb6ac0",
+    "providers": [
+      {
+        "namespace": "Microsoft.Network",
+        "resourceTypes": [
+          {
+            "resourceType": "networkInterfaces",
+            "locations": [
+              "eastus"
+            ]
+          },
+          {
+            "resourceType": "networkSecurityGroups",
+            "locations": [
+              "eastus"
+            ]
+          },
+          {
+            "resourceType": "virtualNetworks",
+            "locations": [
+              "eastus"
+            ]
+          },
+          {
+            "resourceType": "publicIpAddresses",
+            "locations": [
+              "eastus"
+            ]
+          }
+        ]
+      },
+      {
+        "namespace": "Microsoft.Compute",
+        "resourceTypes": [
+          {
+            "resourceType": "virtualMachines",
+            "locations": [
+              "eastus"
+            ]
+          }
+        ]
+      },
+      {
+        "namespace": "Microsoft.DevTestLab",
+        "resourceTypes": [
+          {
+            "resourceType": "schedules",
+            "locations": [
+              "eastus"
+            ]
+          }
+        ]
+      }
+    ],
+    "dependencies": [
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/96ab9d48-12c1-4157-8c60-6b915ce0a604/resourceGroups/rg_training/providers/Microsoft.Network/networkSecurityGroups/trainer-vm-nsg",
+            "resourceType": "Microsoft.Network/networkSecurityGroups",
+            "resourceName": "trainer-vm-nsg"
+          },
+          {
+            "id": "/subscriptions/96ab9d48-12c1-4157-8c60-6b915ce0a604/resourceGroups/rg_training/providers/Microsoft.Network/virtualNetworks/vm_network",
+            "resourceType": "Microsoft.Network/virtualNetworks",
+            "resourceName": "vm_network"
+          },
+          {
+            "id": "/subscriptions/96ab9d48-12c1-4157-8c60-6b915ce0a604/resourceGroups/rg_training/providers/Microsoft.Network/publicIpAddresses/trainer-vm-ip",
+            "resourceType": "Microsoft.Network/publicIpAddresses",
+            "resourceName": "trainer-vm-ip"
+          }
+        ],
+        "id": "/subscriptions/96ab9d48-12c1-4157-8c60-6b915ce0a604/resourceGroups/rg_training/providers/Microsoft.Network/networkInterfaces/trainer-vm27",
+        "resourceType": "Microsoft.Network/networkInterfaces",
+        "resourceName": "trainer-vm27"
+      },
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/96ab9d48-12c1-4157-8c60-6b915ce0a604/resourceGroups/rg_training/providers/Microsoft.Network/networkInterfaces/trainer-vm27",
+            "resourceType": "Microsoft.Network/networkInterfaces",
+            "resourceName": "trainer-vm27"
+          }
+        ],
+        "id": "/subscriptions/96ab9d48-12c1-4157-8c60-6b915ce0a604/resourceGroups/rg_training/providers/Microsoft.Compute/virtualMachines/trainer-vm",
+        "resourceType": "Microsoft.Compute/virtualMachines",
+        "resourceName": "trainer-vm"
+      },
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/96ab9d48-12c1-4157-8c60-6b915ce0a604/resourceGroups/rg_training/providers/Microsoft.Compute/virtualMachines/trainer-vm",
+            "resourceType": "Microsoft.Compute/virtualMachines",
+            "resourceName": "trainer-vm"
+          }
+        ],
+        "id": "/subscriptions/96ab9d48-12c1-4157-8c60-6b915ce0a604/resourceGroups/rg_training/providers/Microsoft.DevTestLab/schedules/shutdown-computevm-trainer-vm",
+        "resourceType": "Microsoft.DevTestLab/schedules",
+        "resourceName": "shutdown-computevm-trainer-vm"
+      }
+    ],
+    "validationLevel": "Template"
+  }
+}

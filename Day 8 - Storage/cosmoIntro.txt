@@ -1,0 +1,15 @@
+VM
+SQL
+Storage
+App Service
+
+	open source service
+		NoSQL - MongoDB
+		Gramlin - graph api
+		tablue 
+		etc..
+
+CosmoDB is  name of service which allows us to create, work with and manage open source services	
+	work with NoSQL database  MongoDB - perform a crud operations
+
+

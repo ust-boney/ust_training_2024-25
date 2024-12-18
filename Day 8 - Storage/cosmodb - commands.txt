@@ -1,0 +1,101 @@
+
+
+
+			SQL                 NoSQL
+			database	    database
+			table		    collections
+			cols and rows	    documents
+				For CRUD
+			SQL	            functions (JavaScript functions) 
+			insert		    add()
+			update		    edit()
+					    edit({id:101},{....});
+			delete		    remove() //removes everything
+					    remove({id:105}); removes a document with id as 5
+					    remove({category:'Cold-Drink'}); remove all documents with cold-drink 													category
+			select		    find() / findall()
+	    					sort()
+						join()
+
+------------------------------------------------------------------------------------------------------
+
+		create database shoppingDB; this will create the database
+		use shoppingDB
+
+		but i can also say
+		use bankingDB;   (if there is bankingdb, it start using it, 
+				 if it does not exist, it will create it and start using it)
+				same with collections(tables)
+
+-----------------------------------------------------------------------
+			use shoppingDB;
+			db.createCollection("products");
+			db.products.insertOne({pid:105,pName:'Maggie',pPrice:180,pQty:500})			                   db.products.insertMany([{pid:106,pName:'Iphone',pPrice:160000,pQty:10},{pid:107,pName:'Sandwitch',pPrice:180,pQty:500},{pid:108,pName:'Puma',pPrice:1900,pQty:500}]);
+
+
+		db.products.find();
+		db.products.find().pretty();
+		db.products.find({pid:103});
+
+		db.products.updateOne({pid:102},{$set:{pPrice:8000,pQty:15}});
+		 db.products.updateOne({pid:205},{$set:{pName:'Air Pods'}});
+	upsert
+		db.products.updateOne({pid:205},{$set:{pPrice:12000,pQty:5}},{upsert:true});
+
+https://www.w3schools.com/mongodb/index.php
+----------------------------------------------------------------------------------------------------
+1. How does developer connects from local system
+	we have to download a command line tool - mongoshell - download and then connect 
+	
+
+
+mongodb+srv://nikhilshah:Password@1234@nikhiltrainingust.global.mongocluster.cosmos.azure.com/?tls=true&authMechanism=SCRAM-SHA-256&retrywrites=false&maxIdleTimeMS=120000
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	

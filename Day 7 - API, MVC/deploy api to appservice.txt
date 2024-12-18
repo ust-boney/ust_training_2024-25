@@ -1,0 +1,14 @@
+Try :
+
+	1. The rest api service we created in morning, publish it as a web app and check the output,
+	swagger will not run / should be disabled in production environment
+
+
+	2. you will create an angular application and make a get call to the api above, display the data in table
+	3. you will get an error - CORS - which we will learn to configure from azure portal as well as the REST api webapp 
+
+------------------------------------------
+	Task :
+	we need to make a call to post the data
+
+	Tip: you will need to have angular form and _http.post('url',.....).then(

@@ -1,0 +1,91 @@
+1. Virtual machines / (compute)
+2. SQL Server and SQL Database
+3. App services
+	REST API 
+	MVC app
+	Angular 
+4. Storage Account / Storage service
+	Disk 
+
+	offerings
+		1.
+		Blob storage (Binary large objects) - v1 storage
+		
+		Datalake storage (storage for binaries - but it will perform data analytics on the data
+			as well as create index for faster search on the data) - V2 
+
+			2 types again
+			Hot - for the content which needs frequent access
+			Cold - for the backups, old data needs infrequent access\
+
+
+			blob/datalake			
+				containers
+					files
+					folders
+						files
+						subfolder
+
+		2. File Share
+			if we want to share a folder with everyone in network, at office we use to have
+			a shared folder
+			Problem : 
+			1. shareing will be possible only in same network, how about ppl in different 				network
+			2. network understanding for Linux and mac machines are different
+		Solution :this was problematic, this microsoft now allows us to create a shared folder over 			  HTTP
+
+		3. Tables
+		problem : for storing and quering the data, we need a table
+				for which we need a database, for which we need a server (database server)
+			 we want to store images, videos, also NoSQL data (json documents)
+
+		Solution: with storage account, you can now create a table, which is flexible
+		stores the data in key/value pair
+			where key is a unique value and value can be anything (img,data, video, json)
+			you can still query the same using sql language
+
+		4. Queues
+			eg. for online food processing (Zomato)
+			
+
+	users - developers works with a tool Azure storage explorer - free tool for all the OS
+		clients are also given access to storage and they do not need azure subscription as well 		for the same
+	how to create and share the tokens to users - SAS token
+	SAS - Shared Access Signature - allows access to only limited resources 
+		you can also setup a time line for access - from 18-Dec-24 to 25-Dec-24 after this token 		will expire
+
+		we create such tokens and share it with the users / other developers / clients and 			customers, so that they can design their applications in angular/java/.net etc..
+		and they want to access files/images/videos etc from our storage 
+		This will need
+		Enable storage account key access = true
+
+
+		
+-------------------------
+	we created a private container and we added a 2 ppt file to it - AITooling and RDBMS
+	
+	1. Give access to AITooling file to some people only - read only access
+		give access only for 2 hrs - 8Dec2024 - 12:00PM to 2:00PM
+	2. Give access to both the files to 1 of the customer - they are a part of ppts container
+	3. give access to entire container - read only
+	4. give access to whole container - total control 
+	5. give access to entire blob (which may have multiple containers)
+
+
+	all of this can be achived by createing the SAS token 
+		you can creaete sas token at file level, folder level, container level and blob level
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+			

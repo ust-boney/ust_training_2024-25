@@ -87,8 +87,26 @@ in which they opened data centers - real big and huge, with tons of hardware and
 
 		eg. for most of the users which are from UK, it will be a great idea to host a website in UK data center
 
+----------you need a subscription to work on cloud and you end up adding a credit card to it
 
+	but for a training, participants cannot be asked to use their credit card
 
+	Thus Microsoft provides us a subscription bound to time and value 
+
+-------------How do you connect to data center and work with the services
+
+		1. https://www.portal.azure.com - using a browser
+		2. Azure CLI (available for all the OS) -needs to be downloaded and installed
+			and then you will login using a command
+				az login 
+		3. Azure powershell (for running the scripts)
+		4. Cloudshell (this is powershell built into the azure portal)
+
+------------ We use ARM templates for automation / Infrastructure as a code
+		ARM template is in JSON format - JSON files
+
+		this arm template can be used for scripting (powershell scripting) to run a loop for create multiple machines
+		eg. 20 machines
 
 
 

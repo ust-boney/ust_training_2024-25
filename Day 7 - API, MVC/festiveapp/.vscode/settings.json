@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/2a3c6418-97b9-4d96-a24b-2c2d7633d375/resourceGroups/rg-azuser2550_mml.local-8wGtr/providers/Microsoft.Web/sites/festiveappnik",
+    "appService.deploySubpath": "dist\\festiveapp"
+}
